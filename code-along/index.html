@@ -7,24 +7,24 @@
   <!-- Adding Tailwind -->
   <!-- Tailwind makes no assumptions, and removes almost all built-in browser styling -->
   <!-- Think of it as not letting the browser style my page – I want to style it instead -->
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" type="text/css">
+  <link href="https://unpkg.com/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
   <!-- The container gives our content a reasonable width on all devices -->
   <!-- mx-auto gives the margins ("gutters") on the left and right that we're all used to -->
-  <div class="mx-auto container">
+  <div class="md:mx-16 md:my-8 mx-8 my-4">
     <!-- Things you want to arrange horizontally need a flex container -->
     <!-- items-center centers vertically -->
     <div class="flex items-center mt-8">
       <!-- Elements like h1, h2, h3, p, div are block-level elements -->
-      <h1 class="text-xl flex-auto">
+      <h1 class="text-xl w-1/2">
         <a href="index.html">
           <span class="font-medium text-gray-500">Hi! Welcome to</span> 
           <span class="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">Musiccessories!</span>
         </a>
       </h1>
 
-      <p class="flex-auto text-right capitalize">
+      <p class="w-1/2 text-right capitalize">
         <!-- Elements like strong, em, span, img, a are inline elements -->
         <!-- Inline elements are often nested inside block-level elements -->
         <strong>No instruments.</strong> <em>Only accessories.</em>
@@ -34,7 +34,7 @@
 
   <!-- Example "hero" unit -->
   <div class="bg-gray-200 my-8 py-16">
-    <div class="container m-auto">
+    <div class="md:mx-16 md:my-8 mx-8 my-4">
   
       <div class="md:flex items-center">
         <div class="px-4 md:p-0 md:w-2/3">
@@ -45,9 +45,9 @@
   
           <div class="py-5">
             <a href="products.html"
-              class="text-white rounded-full py-2 px-5 text-lg font-semibold bg-purple-600 border border-purple-600 mr-3">View Products</a>
+              class="text-white rounded-full py-2 px-5 md:text-lg text-sm font-semibold bg-purple-600 border border-purple-600 mr-3">View Products</a>
             <a href="mailto:b-eng@kellogg.northwestern.edu"
-              class="text-black rounded-full py-2 px-5 text-lg font-semibold bg-gray-400 border hover:bg-white hover:text-black">Order Now</a>
+              class="text-black rounded-full py-2 px-5 md:text-lg text-sm font-semibold bg-gray-400 border hover:bg-white hover:text-black">Order Now</a>
           </div>
   
         </div>
@@ -59,7 +59,7 @@
     </div>
   </div>
 
-  <div class="mx-auto container">
+  <div class="md:mx-16 md:my-8 mx-8 my-4">
     <p class="my-4">
       <!-- Links with the http:// in front will look for a location on the Internet -->
       Looking for instruments? Go to <a class="text-blue-500 underline" href="http://guitarcenter.com">Guitar Center</a>.

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KIEI-451: Tailwind Introduction</title>
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" type="text/css">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css" rel="stylesheet"
     type="text/css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.css"
@@ -16,34 +16,37 @@
 </head>
 
 <body>
-  <div class="container mx-auto py-8">
+  <div class="container mx-auto py-8 space-y-4">
     <h1 class="text-lg uppercase text-gray-500 font-bold">KIEI-451: Introduction to Software Development</h1>
     <h2 class="text-2xl font-bold">HTML Introduction</h2>
-    <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hi, this is my website.<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    </code></pre>
+    <pre><code class="lang-html">
+&lt;h1&gt;Hi, this is my website.&lt;/h1&gt;</code></pre>
     <p>This is the most basic example of an HTML element. There is a opening tag (<code>&lt;h1&gt;</code>), some content in
       the middle, and a matching closing tag (<code>&lt;/h1&gt;</code>). Almost all HTML elements are written this way.</p>
     <p>Although not technically correct, the terms tag and element are often used interchangeably. Sometimes, you&rsquo;ll
       see this whole thing referred to as an &ldquo;H1 tag&rdquo;. Try not to get caught up in the semantics.</p>
-    <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hi, this is my website.<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Something really interesting about myself.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <pre><code class="lang-html">
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hi, this is my website.<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Something really interesting about myself.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     </code></pre>
     <p>Here, we have an H1 element and a P element. H1 stands for &ldquo;heading level 1&rdquo; and P stands for
       &ldquo;paragraph&rdquo;. A lot of the time, the tag abbreviations make total sense, although sometimes they
       don&rsquo;t at all.</p>
-    <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>My favorite things to eat, <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>by a wide margin<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>, are tacos.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>In my spare time, I sometimes play golf and... <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>eat tacos<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <pre><code class="lang-html">
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>My favorite things to eat, <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>by a wide margin<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>, are tacos.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>In my spare time, I sometimes play golf and... <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>eat tacos<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     </code></pre>
     <p>Elements are either &ldquo;block&rdquo; or &ldquo;inline&rdquo;.&nbsp;<em>Block-level elements</em>&nbsp;begin a new
       line and stack on top of each other.&nbsp;<em>Inline elements</em>&nbsp;do not. Here, each P element will begin on its
       own line, whereas the strong and em elements will not.</p>
     <p>BTW,&nbsp;<code>strong</code>&nbsp;= bold and&nbsp;<code>em</code>&nbsp;= italicized. Who knew?</p>
-    <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Tacos<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Bacon<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Pizza<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Fried Chicken<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <pre><code class="lang-html">
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Tacos<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Bacon<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Pizza<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Fried Chicken<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
     </code></pre>
     <p>Elements may be nested. Here, we have a bulleted list. The UL (unordered list) element represents the entire list,
       and each LI (list item) element represents each item in the list.</p>
@@ -62,42 +65,44 @@
     <p>And yes, we can nest the IMG element within the A element to create a clickable image.</p>
     <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://google.com/"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"cat.jpg"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
     </code></pre>
-    <h3 id="web-pages">Web Pages</h3>
+    <h3 class="font-bold text-xl">Web Pages</h3>
     <p>Now that we've been introduced to some basic HTML, it's time to examine the anatomy of a complete web page. Now,
       don't let the fancy terminology trip you up &ndash; a "web page" is simply a text file that lives on a hard drive
       somewhere. The only real requirements for turning a plain mild-mannered text file into a web page are:</p>
-    <ul>
+    <ul class="list-disc list-inside">
       <li>The filename of this file ends with the&nbsp;<code>.html</code>&nbsp;extension.</li>
       <li>The contents of the file are valid HTML &ndash; that is, it
         contains&nbsp;<code>&lt;html&gt;</code>,&nbsp;<code>&lt;head&gt;</code>,
         and&nbsp;<code>&lt;body&gt;</code>&nbsp;elements, and this weird&nbsp;<code>&lt;!doctype&gt;</code>&nbsp;thing at
         the very top.</li>
     </ul>
-    <pre><code class="lang-html"><span class="hljs-meta">&lt;!doctype html&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>This web page is pretty boring.<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Zzzzzz<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+    <pre><code class="lang-html">
+<span class="hljs-meta">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>This web page is pretty boring.<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Zzzzzz<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
     </code></pre>
     <p>Yeah, pretty much the most boring valid HTML web page ever, right? But it's valid HTML that will be read and
       interpreted by any web browser, anywhere.</p>
-    <h3 id="web-page---web-site">Web Page -&gt; Web Site</h3>
+    <h3 class="font-bold text-xl">Web Page 👉 Web Site</h3>
     <p>A web site is a collection of one or more web pages. No, really, that's about it.</p>
     <p>Alright, for the sake of discussing it some more, consider this group of files, sitting on a computer
       somewhere:&nbsp;</p>
-    <pre><code>index.html
-    products.html
-    about-us.html
-    contact.html
+    <pre><code>
+index.html
+products.html
+about-us.html
+contact.html
     </code></pre>
     <p>If this computer were accessible from the Internet somehow, you could slap a domain name on it (more about that
       later), and it'd be just like many of the publicly available web sites you might visit today. There are a couple more
       basic rules at work here:</p>
-    <ul>
+    <ul class="list-disc list-inside">
       <li>The main entry point (i.e. the home page) is named index.html &ndash; just trust me on this one.</li>
       <li>The filenames don't contain spaces or any other weird characters &ndash; just stick to letters, maybe a number, or
         dash or two.</li>
